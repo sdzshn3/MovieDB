@@ -29,7 +29,6 @@ class Repository @Inject constructor(
             if (response.isSuccessful) {
                 Resource.success(response.body())
             } else {
-                println(response.errorBody()?.string())
                 Resource.error("Something went wrong. Please try again", null)
             }
         } catch (e: Exception) {
